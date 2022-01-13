@@ -6,11 +6,6 @@ int digitmult(int N);
 
 int main()
 {
-   float x = 1.1;
-   if( x )
-    {
-    printf("%f", x);
-    }
 
    return 0;
 }
@@ -59,16 +54,18 @@ int digitmult(int N){
     return 0;
 }
 
-int fibonacci(int n){
-        int op = 0;
-       if (n ==0)
-        op = 0;
-
-    else if (n ==1){
-            op = 1;
-    }
-        else
-            op = fibonacci(n-1) + fibonacci(n-2);
+int fibonacci(int n){         //TO FIND THE n^TH Fibonacci Number(Doesnt print all fibonacci Numbers)
+       
+       int op = 0;
+       
+       if (n == 0)
+            op = 0;
+        
+        else if (n == 1)
+                  op = 1;
+             
+          else
+              op = fibonacci(n-1) + fibonacci(n-2);
 
 return op;
 }
