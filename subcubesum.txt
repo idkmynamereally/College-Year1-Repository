@@ -1,0 +1,74 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int cubesum(int n);
+int digitmult(int N);
+
+int main()
+{
+   float x = 1.1;
+   if( x )
+    {
+    printf("%f", x);
+    }
+
+   return 0;
+}
+
+int cubesum(int n){
+    int d;
+    int sum = 0;
+    int i;
+    int N = n;
+    while (N != 0)
+       {
+        d = N % 10;
+        N = (N - (N % 10)) / 10;
+        sum = sum + d*d*d;
+       }
+        return sum;
+        }
+
+int digitmult(int N){
+    int n = N;
+    back:;
+    int d = 1;
+    int tot = 1;
+        while (n != 0){
+            if (n > 10)
+            {
+             d = n % 10;
+             tot = d * tot;
+             n = (n - (n % 10))/10;
+            }
+             else
+              {
+                d = n;
+                tot = tot * d;
+                n = n - d;
+              }
+        }
+        if (tot > 9)
+           {
+            n = tot;
+            goto back;
+           }
+            else
+              printf("%d", tot);
+
+    return 0;
+}
+
+int fibonacci(int n){
+        int op = 0;
+       if (n ==0)
+        op = 0;
+
+    else if (n ==1){
+            op = 1;
+    }
+        else
+            op = fibonacci(n-1) + fibonacci(n-2);
+
+return op;
+}
