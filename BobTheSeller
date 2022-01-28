@@ -1,0 +1,63 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+
+	int n,output = 0;
+	cin >> n;
+	int * items = new int [n];
+	for (int i = 0 ; i < n; i++){
+	    cin >> items[i];
+	}
+	int queries;
+    cin >> queries;
+for ( int g = 1 ; g<= queries; g++ ){    
+    int start = 0,end = 0, max_items = 0;
+    cin >> start >> end >> max_items;
+    
+    int * bob_search = new int [end - start + 1];
+    int x = start - 1;
+    for(int i = 0; i < (end - start + 1); i++){
+        bob_search[i] = items[x];
+        x++;
+    }
+    
+    int counter = 0, member = 0;
+    bool checksame = 0;
+    int criteria = 2;
+    int a = 0;
+    
+    for (int x = bob_search[a]; a < (end - start + 1); a++){
+        if (max_items == 0)
+            break;
+        checksame = 0;
+        counter = 1;
+        member++;
+        
+        for (int j = 0; j < (end - start + 1); j++){
+            if(x == bob_search[j])
+                counter++;
+        }
+        
+        if(counter == 1){
+            output++;
+        }
+        
+        if (counter == criteria){
+            max_items = max_items - criteria + 1;   
+            output++;
+            x = NULL;
+        }
+        
+}
+cout << output << endl;
+}
+return 0;}
+
+
+
+/* ISSUES = WHAT IF LOWEST FRQEQUENCY FOR CRITERIA IS MORE THAN 2?
+            HOW TO NOT CHECK AND COUNTER FOR A NUMBER ALREADY CHECKED?
+            
+            Question = 
+            
