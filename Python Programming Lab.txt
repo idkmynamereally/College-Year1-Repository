@@ -63,3 +63,14 @@ if ( x%4 == 0 ):
     print("its A Leap Year")
 else:
     print('Its Not a Leap Year')
+    
+Lab 2 : 
+    Code 1
+    n = int(input())
+if (n%2 == 0):
+    if (n > 1 and n < 6) or (n > 20):
+        print("Not Weird")
+    elif (n > 5 and n < 21):
+        print("Weird")
+else:
+    print("Weird")
