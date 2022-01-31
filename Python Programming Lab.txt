@@ -1,0 +1,65 @@
+Code 1
+x = 15
+y = 20
+print ("x = ", x, "\ny = ", y)
+
+code 2
+a = int(input("Enter value of a : "))
+b = int(input("Enter value of b : "))
+y = 0
+x = a
+if a > b:
+    x = b
+else:
+    x = a
+for i in range(x,0,-1):
+    if a%i == 0 and b%i == 0:
+        print("GCD IS ",i)
+        break
+
+3rd code
+a = int(input("Enter value of a : "))
+b = int(input("Enter value of power : "))
+y = a
+for i in (0,b+1):
+    a = a * y
+print(a)
+
+4th code
+a = int(input("Enter number of elements : "))
+b = []
+for i in range(0 , a):
+    b.insert(i,int(input("Input Array element : ")))
+sum = 0
+for i in b:
+    sum = sum + i
+print("Sum is",sum)
+
+5th code
+a = int(input("Input a number "))
+b = 0.5
+print("Root is ",a**b)
+
+code 6
+import cmath
+
+a = 1
+
+b = 5
+
+c = 6
+
+d = (b**2) - (4*a*c)
+
+root1 = (-b-cmath.sqrt(d))/(2*a)
+
+root2 = (-b+cmath.sqrt(d))/(2*a)
+
+print('The solution are {0} and {1}'.format(root1,root2))
+
+7th code
+x = int(input("Enter Year :"))
+if ( x%4 == 0 ):
+    print("its A Leap Year")
+else:
+    print('Its Not a Leap Year')
