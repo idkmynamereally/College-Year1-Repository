@@ -74,3 +74,10 @@ if (n%2 == 0):
         print("Weird")
 else:
     print("Weird")
+
+8th code
+n = int(input())
+for i in range(0,n):
+    print(i**2)
+    print("\n")
+    
