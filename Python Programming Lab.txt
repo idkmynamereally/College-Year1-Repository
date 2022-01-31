@@ -75,9 +75,13 @@ if (n%2 == 0):
 else:
     print("Weird")
 
-8th code
+    Code 2 - 
 n = int(input())
 for i in range(0,n):
     print(i**2)
     print("\n")
     
+    Code 3 -
+n = int(input())
+for i in range(1,n+1):
+    print(i,end='')
