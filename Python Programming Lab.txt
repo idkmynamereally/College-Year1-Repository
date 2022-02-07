@@ -85,3 +85,22 @@ for i in range(0,n):
 n = int(input())
 for i in range(1,n+1):
     print(i,end='')
+
+
+
+Week 2:
+
+
+    CODE 1 -
+print("Enter The no.of Natural Number")
+n = int(input())
+def recadd(n):
+    if n < 1:
+        return 0
+    if n == 1:
+        return 1
+    else:
+        return n + recadd(n-1)
+print(recadd(n))
+
+    CODE 2 -
