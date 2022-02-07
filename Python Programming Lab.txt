@@ -103,4 +103,24 @@ def recadd(n):
         return n + recadd(n-1)
 print(recadd(n))
 
+
+
     CODE 2 -
+
+
+n = int(input("Enter Nth Term -> "))
+a = 0
+b = 1
+def fibonacci (n):
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+for i in range(0,n):
+    print(fibonacci(i), end = "")
+    print(",",end ="")
+    
+    
+    CODE 3 -
