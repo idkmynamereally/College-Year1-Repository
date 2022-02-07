@@ -108,6 +108,7 @@ print(recadd(n))
     CODE 2 -
 
 
+
 n = int(input("Enter Nth Term -> "))
 a = 0
 b = 1
@@ -124,3 +125,44 @@ for i in range(0,n):
     
     
     CODE 3 -
+    
+def check_baggage(n):
+    if n >= 0 and n <= 40:
+        return True
+    return False
+
+def check_immigration(n):
+    if n >= 2030 and n <= 2050:
+        return True
+    return False
+    
+def check_security(n):
+    if n == "VALID" or n == "valid":
+        return True
+    return False
+    
+def traveler():
+    ID = str(input("Enter Your ID -> "))
+    name = str(input("Enter Your Name -> "))
+    baggage_weight = int(input("Enter Baggage Weight -> "))
+    immigration = int(input("Enter Expiry Date -> "))
+    security = input("Status of Noc -> ")
+    print("\n")
+    
+    if check_baggage(baggage_weight) == True:
+        print("Baggage Valid")
+    else:
+        print("Baggage Invalid")
+    
+    if check_immigration(immigration) == True:
+        print("Immigration Valid")
+    else:
+        print("Immigration Invalid")
+    
+    if check_security(security) == True:
+        print("Security Valid")
+    else:
+        print("Security Invalid")
+        
+traveler()
+    
