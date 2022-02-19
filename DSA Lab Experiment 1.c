@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void sum_of_arr(int * arr, int * size);
+int sum_of_arr(int * arr, int * size);
 void display(int * arr, int  size);
 void insert(int * arr, int * size);
 void delete_(int * arr, int * size);
@@ -60,10 +60,15 @@ char character;
     return 0;
 }
 
-void sum_of_arr(int * arr,int * size){
+int sum_of_arr(int * arr,int * size){
     int sum = 0;
-    for (int i = 0; i < *size; i++){
-        sum = sum + arr[i];
+    static int i = -1;
+    i++;
+    if (i == size - 1){
+        return arr[i];
+    }
+    if (i < *size - 1){
+        return sum_of_arr(i+1,size) + arr[i];
     }
     printf("Sum Of Array -> %d",sum);
 }
