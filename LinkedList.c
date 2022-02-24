@@ -17,7 +17,7 @@ void takenode(struct node * ptr);
 void display_linked_list();
 void insertnode_to_start();
 void insertnode_to_position(int position);
-
+void delete_node();
 
 int main(){
     int ch = 1;
@@ -29,7 +29,7 @@ int main(){
         printf("\n");
     };
     display_linked_list();
-    insertnode_to_position(3);
+    delete_node();
     display_linked_list();
     
 return 0;
@@ -79,4 +79,17 @@ void display_linked_list(){
     for (ptr = first; ptr != 0; ptr = ptr->next){
         printf("| %d |",ptr->num);
     }
+}
+
+void delete_node(){
+    int pos = 1;
+    int counter = 1;
+    struct node * temp;
+    printf("\nEnter Node Position to be Delete : ");
+    scanf("%d",&pos);
+    for (ptr = first; counter < pos-1; counter++)
+        ptr = ptr->next;
+    temp = ptr->next;
+    ptr->next = ptr->next->next;
+    free(temp);
 }
