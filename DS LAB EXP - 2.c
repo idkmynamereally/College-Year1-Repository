@@ -1,6 +1,52 @@
+//PART 1
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct complex_no{
+    float real_part;
+    float image_part;
+};
+
+struct complex_no add (struct complex_no c1, struct complex_no c2);
+void display_complex (struct complex_no c1);
+void display_complex (struct complex_no c1);
+void insert_complex (struct complex_no * c1,int number);
+
+int main()
+{
+    struct complex_no c1 , c2;
+    insert_complex(&c1,1);
+    insert_complex(&c2,2);
+    display_complex(c1);
+    display_complex(c2);
+    add(c1,c2);
+    return 0;
+}
+
+struct complex_no add (struct complex_no c1, struct complex_no c2){
+    struct complex_no added;
+    added.real_part = c1.real_part + c2.real_part;
+    added.image_part = c1.image_part + c2.image_part;
+    printf("Complex 1 + Complex 2 = %.1f + (%.1f)i\n",added.real_part,added.image_part);
+    return added;
+};
+
+void display_complex (struct complex_no c1){
+    printf("%.1f + (%.1f)i\n",c1.real_part,c1.image_part);
+}
+
+void insert_complex (struct complex_no * c1,int number){
+    printf("Enter Real Part of Number %d : ",number);
+    scanf("%f",&c1->real_part);
+    printf("Enter Imaginary Part of Number %d : ",number);
+    scanf("%f",&c1->image_part);
+}
 
 
 //PART 3
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
