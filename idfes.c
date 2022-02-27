@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+//
 int sum_of_arr(int * arr, int * size);
 void display(int * arr, int  size);
 void insert(int * arr, int * size);
