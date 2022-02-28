@@ -61,6 +61,7 @@ struct quad_eq{
 
 float root_of_eq(struct quad_eq QE,char ch);
 void display_roots(struct quad_eq QE,int number);
+void display_quadratic(struct quad_eq QE,int number);
 
 int main()
 {
@@ -100,6 +101,8 @@ int main()
     display_quadratic(eq1,1);
     display_quadratic(eq2,2);
     printf("Sum Of Roots : %f", sum_of_roots);
+    display_roots(eq1,1);
+    display_roots(eq2,2);
 
     return 0;
 }
@@ -122,8 +125,8 @@ float root_of_eq(struct quad_eq QE,char ch){
 }
 
 void display_roots(struct quad_eq QE,int number){
-    printf("Root 1 of Equation %d : %.2f\n",QE.root_one,number);
-    printf("Root 1 of Equation %d : %.2f\n",QE.root_two,number);
+    printf("\nRoot 1 of Equation %d : %.2f\n",number,QE.root_one);
+    printf("Root 1 of Equation %d : %.2f\n",number,QE.root_two);
 }
 
 void display_quadratic(struct quad_eq QE,int number){
