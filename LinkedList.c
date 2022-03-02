@@ -93,3 +93,79 @@ void delete_node(){
     ptr->next = ptr->next->next;
     free(temp);
 }
+
+
+//Another Linked List
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct node {
+    int value;
+    struct node * next;
+};
+
+struct node * first = NULL;
+struct node * ptr = NULL;
+struct node * new_ = NULL;
+
+void display_list();
+void insert_node_at_end();
+struct node * new_node();
+void insert_node_at_begin();
+
+
+int main(){
+    int repeat = 1;
+    while (repeat == 1){
+        insert_node_at_end();
+        printf("\nPress 1 To Enter Another Node : ");
+        scanf("%d",&repeat);
+    }
+    insert_node_at_position();
+    display_list();
+
+return 0;
+}
+
+
+struct node * new_node(){
+        new_ = (struct node *)malloc(sizeof(struct node));
+        printf("Enter Value Of Node : ");
+        scanf("%d",&new_->value);
+        new_->next = NULL;
+    return new_;
+}
+
+void insert_node_at_end(){
+    if (first == NULL){
+        first = new_node();
+        return;
+    }
+    for (ptr = first; ptr->next!=NULL; ptr = ptr->next);
+    ptr->next = new_node();
+}
+
+void display_list(){
+    for (ptr = first; ptr!= NULL; ptr = ptr->next){
+        printf("| %d |",ptr->value);
+    }
+}
+
+void insert_node_at_begin(){
+    new_ = new_node();
+    new_->next = first;
+    first = new_;
+}
+
+void insert_node_at_position(){
+    int position  = 0;
+    printf("Position of Node : ");
+    scanf("%d",&position);
+    ptr = first;
+    for (int i = 0; i < position - 2; ptr = ptr->next,i++);
+    new_ = new_node();
+    new_->next = ptr->next;
+    ptr->next = new_;
+
+}
